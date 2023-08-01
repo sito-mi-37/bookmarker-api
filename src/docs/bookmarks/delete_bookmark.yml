@@ -1,0 +1,16 @@
+Deletes a particular bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - name: id
+    in: path
+    type: int
+    required: true
+    default: 1
+responses:
+  302:
+    description: Deletes a bookmark
+
+  404:
+    description: Record was not found

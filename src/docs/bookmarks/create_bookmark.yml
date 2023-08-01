@@ -1,0 +1,27 @@
+Create Bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - name: body
+    description: The body should contain the new url data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "url"
+        - "body"
+      properties:
+        url:
+          type: "url"
+          example: "http://www.google.com"
+        body:
+          type: "string"
+          example: "the url to an ancient archive"
+responses:
+  201:
+    description: When a url is successfully added
+
+  400:
+    description: Fails to add new url due to bad request data
